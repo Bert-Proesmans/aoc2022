@@ -5,3 +5,27 @@ version = 3
 [[package]]
 name = "aoc2022"
 version = "0.1.0"
+dependencies = [
+ "itermore",
+]
+
+[[package]]
+name = "arrays"
+version = "0.1.1"
+source = "git+https://github.com/rossmacarthur/itermore/?rev=0.5.0#675552137b825e17960aab98afd24ffff3819275"
+
+[[package]]
+name = "iterchunks"
+version = "0.3.0"
+source = "git+https://github.com/rossmacarthur/itermore/?rev=0.5.0#675552137b825e17960aab98afd24ffff3819275"
+dependencies = [
+ "arrays",
+]
+
+[[package]]
+name = "itermore"
+version = "0.5.0"
+source = "git+https://github.com/rossmacarthur/itermore/?rev=0.5.0#675552137b825e17960aab98afd24ffff3819275"
+dependencies = [
+ "iterchunks",
+]

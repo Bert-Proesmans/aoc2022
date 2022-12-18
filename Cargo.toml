@@ -9,13 +9,19 @@ bench = false
 doctest = false
 doc = false
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# Dependencies loaded through git because the crates.io index is no small thing
 
-[dependencies]
-
+[dependencies.itermore]
+git = "https://github.com/rossmacarthur/itermore/"
+rev = "0.5.0"
+default-features = false
+features = ["array_chunks"]
 
 [[example]]
 name = "day01"
 
 [[example]]
 name = "day02"
+
+[[example]]
+name = "day03"
