@@ -10,12 +10,18 @@ doctest = false
 doc = false
 
 # Dependencies loaded through git because the crates.io index is no small thing
-
 [dependencies.itermore]
 git = "https://github.com/rossmacarthur/itermore/"
 rev = "0.5.0"
 default-features = false
 features = ["array_chunks"]
+
+# FAKKING NOM COULDN'T BE SELFCONTAINED OR WHAT, BRUUUH
+[dependencies.nom]
+git = "https://github.com/Geal/nom"
+rev = "7.1.1"
+default-features = false
+# features = ["std", "alloc"]
 
 [[example]]
 name = "day01"
@@ -25,3 +31,6 @@ name = "day02"
 
 [[example]]
 name = "day03"
+
+[[example]]
+name = "day04"

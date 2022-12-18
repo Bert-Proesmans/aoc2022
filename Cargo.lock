@@ -7,6 +7,7 @@ name = "aoc2022"
 version = "0.1.0"
 dependencies = [
  "itermore",
+ "nom",
 ]
 
 [[package]]
@@ -28,4 +29,25 @@ version = "0.5.0"
 source = "git+https://github.com/rossmacarthur/itermore/?rev=0.5.0#675552137b825e17960aab98afd24ffff3819275"
 dependencies = [
  "iterchunks",
+]
+
+[[package]]
+name = "memchr"
+version = "2.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
+
+[[package]]
+name = "minimal-lexical"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a"
+
+[[package]]
+name = "nom"
+version = "7.1.1"
+source = "git+https://github.com/Geal/nom?rev=7.1.1#294ffb3d9e0ade2c3b7ddfff52484b6d643dcce1"
+dependencies = [
+ "memchr",
+ "minimal-lexical",
 ]
