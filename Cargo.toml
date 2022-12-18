@@ -16,3 +16,6 @@ doc = false
 
 [[example]]
 name = "day01"
+
+[[example]]
+name = "day02"
