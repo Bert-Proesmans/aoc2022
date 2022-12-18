@@ -1,8 +1,17 @@
 //  Get-Content .\examples\day02.stdin | cargo run --example day02
 fn main() {
-    // let source = input_parser_part_one(std::io::stdin().lines());
-    let source = input_parser_part_two(std::io::stdin().lines());
-    println!("{:?}", aoc2022::day02::rock_paper_scissors_score(source));
+    let input =
+        aoc2022::rx::ReplaySubject::new(std::io::stdin().lines().map(|x| x.map_err(|_| false)));
+    {
+        // Part one
+        let source = input_parser_part_one(input.clone());
+        println!("{:?}", aoc2022::day02::rock_paper_scissors_score(source));
+    }
+    {
+        // Part two
+        let source = input_parser_part_two(input.clone());
+        println!("{:?}", aoc2022::day02::rock_paper_scissors_score(source));
+    }
 }
 
 fn input_parser_part_one<IteratorType, IntermediateType, ItemType>(
